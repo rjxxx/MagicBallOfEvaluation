@@ -100,17 +100,17 @@ void loop() {
 
             case 1:
                 size = "S";
-                color = RGB565(153, 255, 0);
+                color = RGB565(127, 245, 66);
                 break;
 
             case 2:
                 size = "M";
-                color = RGB565(255, 255, 0);
+                color = RGB565(255, 235, 132);
                 break;
 
             case 3:
                 size = "L";
-                color = RGB565(255, 102, 0);
+                color = RGB565(255, 118, 66);
                 break;
 
             case 4:
@@ -125,27 +125,27 @@ void loop() {
     if (mpu.getMotionInterruptStatus()) {
         switch (sizeIndex) {
             case 0:
-                randNumber = random(1, 3);
+                randNumber = random(1, 4);
                 itoa(randNumber, days, 10);
                 break;
 
             case 1:
-                randNumber = random(4, 10);
+                randNumber = random(4, 8);
                 itoa(randNumber, days, 10);
                 break;
 
             case 2:
-                randNumber = random(10, 20);
+                randNumber = random(8, 15);
                 itoa(randNumber, days, 10);
                 break;
 
             case 3:
-                randNumber = random(20, 50);
+                randNumber = random(15, 30);
                 itoa(randNumber, days, 10);
                 break;
 
             case 4:
-                randNumber = random(50, 300);
+                randNumber = random(30, 100);
                 itoa(randNumber, days, 10);
                 break;
         }
